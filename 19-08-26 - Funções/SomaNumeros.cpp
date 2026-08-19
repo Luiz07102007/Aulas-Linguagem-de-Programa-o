@@ -11,8 +11,10 @@
 //Sessão de prototipação - Declarando funções
 int somar(int, int);
 int multiplicar(int, int);
-float dividir(float, float);
+float dividir(int, int);
 int subtrair(int, int);
+
+// inicio do main
 main() 
 {
 	setlocale(LC_ALL,"Portuguese");
@@ -28,7 +30,7 @@ main()
 	
 	soma = somar(a,b);
 	mult = multiplicar(a,b);
-	div = dividir((float)a,(float)b);
+	div = dividir(a,b);
 	sub = subtrair(a,b);
 	
 	printf("a soma de %d e %d é: %d",a,b,soma);
@@ -36,9 +38,10 @@ main()
 	printf("\na divisão de %d por %d é: %.2f",a,b,div);
 	printf("\na subtração de %d por %d é: %d",a,b,sub);
 
-}
+} //fim do main
 
-//Função Soma
+
+//Função Somar
 int somar(int a, int b){
 	int result = 0;
 	result = a+b;
@@ -51,12 +54,12 @@ int multiplicar(int a, int b) {
 	return result;
 }
 //Função Dividir
-float dividir(float a, float b) {
+float dividir(int a, int b) {
 	float result = 0.0;
-	result = a/b;
+	result = (float)a/b;
 	return result;
 }
-//Função Subtração
+//Função Subtrair
 int subtrair(int a, int b) {
 	int result = 0;
 	result = a-b;
