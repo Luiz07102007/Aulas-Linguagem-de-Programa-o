@@ -7,6 +7,7 @@
 //Sessão de importação
 #include<stdio.h>	
 #include<locale.h>
+#include<math.h>
 
 //Sessão de prototipação - Declarando funções
 int somar(int, int);
@@ -14,13 +15,14 @@ int multiplicar(int, int);
 float dividir(int, int);
 int subtrair(int, int);
 int calcularPotencia(int, int);
+int calcularPotenciaPow(int, int);
 // inicio do main
 main() 
 {
 	setlocale(LC_ALL,"Portuguese");
-	int a, b, soma,mult,sub,pot;
+	int a, b, soma,mult,sub,pot,pot2;
 	float div;
-	pot = sub = mult = a = b = soma = 0;
+	pot2 = pot = sub = mult = a = b = soma = 0;
 	div = 0.0;
 	
 	printf("digite o valor de A: ");
@@ -33,11 +35,13 @@ main()
 	div = dividir(a,b);
 	sub = subtrair(a,b);
 	pot = calcularPotencia(a,b);
+	pot2 = calcularPotenciaPow(a,b);
 	printf("a soma de %d e %d é: %d",a,b,soma);
 	printf("\na multiplicação de %d e %d é: %d",a,b,mult);
 	printf("\na divisão de %d por %d é: %.2f",a,b,div);
 	printf("\na subtração de %d por %d é: %d",a,b,sub);
 	printf("\n%d elevado a %d é: %d",a,b,pot);
+	printf("\nusando a função nativa pow, %d elevado a %d é: %d",a,b,pot2);
 
 
 } //fim do main
@@ -75,5 +79,10 @@ int calcularPotencia(int a, int b) {
 		result = result*a;
 	}
 	return result;
+}
+//Função calcularPotenciaPow
+int calcularPotenciaPow(int base, int exp) {
+	
+	return pow(base,exp);
 }
 //fim do programa
