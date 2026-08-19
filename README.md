@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://shields.io" alt="C Language">
-  <img src="https://shields.io" alt="FATEC">
+  <img src="[https://shields.io](https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/198/2024/08/logo-fatec-santana-de-parnaiba.png)" alt="FATEC">
   <img src="https://shields.io" alt="Status">
 </p>
 
