@@ -22,9 +22,9 @@ main()
 {
 	setlocale(LC_ALL,"Portuguese");
 	int a, b, soma,mult,sub,pot,pot2;
-	float div,raiz;
+	float div,raiz,raizb;
 	pot2 = pot = sub = mult = a = b = soma = 0;
-	raiz = div = 0.0;
+	raizb = raiz = div = 0.0;
 	
 	printf("digite o valor de A: ");
 	scanf("%d",&a);
@@ -38,6 +38,7 @@ main()
 	pot = calcularPotencia(a,b);
 	pot2 = calcularPotenciaPow(a,b);
 	raiz = calcularRaizQuadrada(a);
+	raizb = calcularRaizQuadrada(b);
 	printf("a soma de %d e %d é: %d",a,b,soma);
 	printf("\na multiplicação de %d e %d é: %d",a,b,mult);
 	printf("\na divisão de %d por %d é: %.2f",a,b,div);
@@ -45,7 +46,7 @@ main()
 	printf("\n%d elevado a %d é: %d",a,b,pot);
 	printf("\nusando a função nativa pow, %d elevado a %d é: %d",a,b,pot2);
 	printf("\n a raiz quadrada de %d é %.2f",a,raiz);
-	printf("\n a raiz quadrada de %d é %.2f",b,raiz);
+	printf("\n a raiz quadrada de %d é %.2f",b,raizb);
 
 
 
