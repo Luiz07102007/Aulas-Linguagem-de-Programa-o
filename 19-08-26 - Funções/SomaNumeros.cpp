@@ -9,7 +9,7 @@
 #include<locale.h>
 
 //Sessão de prototipação
-int somar(int a, int b);
+int somar(int, int);
 
 main() 
 {
@@ -25,6 +25,7 @@ main()
 	printf("a soma de %d e %d é: %d",a,b,soma);
 }
 
+//Função Soma
 int somar(int a, int b){
 	int result = 0;
 	result = a+b;
