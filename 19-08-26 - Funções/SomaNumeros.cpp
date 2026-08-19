@@ -16,14 +16,15 @@ float dividir(int, int);
 int subtrair(int, int);
 int calcularPotencia(int, int);
 int calcularPotenciaPow(int, int);
+float calcularRaizQuadrada(int);
 // inicio do main
 main() 
 {
 	setlocale(LC_ALL,"Portuguese");
 	int a, b, soma,mult,sub,pot,pot2;
-	float div;
+	float div,raiz;
 	pot2 = pot = sub = mult = a = b = soma = 0;
-	div = 0.0;
+	raiz = div = 0.0;
 	
 	printf("digite o valor de A: ");
 	scanf("%d",&a);
@@ -36,12 +37,16 @@ main()
 	sub = subtrair(a,b);
 	pot = calcularPotencia(a,b);
 	pot2 = calcularPotenciaPow(a,b);
+	raiz = calcularRaizQuadrada(a);
 	printf("a soma de %d e %d é: %d",a,b,soma);
 	printf("\na multiplicação de %d e %d é: %d",a,b,mult);
 	printf("\na divisão de %d por %d é: %.2f",a,b,div);
 	printf("\na subtração de %d por %d é: %d",a,b,sub);
 	printf("\n%d elevado a %d é: %d",a,b,pot);
 	printf("\nusando a função nativa pow, %d elevado a %d é: %d",a,b,pot2);
+	printf("\n a raiz quadrada de %d é %.2f",a,raiz);
+	printf("\n a raiz quadrada de %d é %.2f",b,raiz);
+
 
 
 } //fim do main
@@ -84,5 +89,10 @@ int calcularPotencia(int a, int b) {
 int calcularPotenciaPow(int base, int exp) {
 	
 	return pow(base,exp);
+}
+
+//Função calcularRaizQuadrada
+float calcularRaizQuadrada(int a) {
+	return sqrt((float)a);
 }
 //fim do programa
